@@ -8,6 +8,7 @@ The main objective of this activity is to detect the modern slavery statements w
 After manually going through the provided data set, it is noticed that data is not ladled properly. some of the documents don't have the labels while some with other than the metric's options i.e., audits of suppliers (self- reporting), audits of suppliers (independent), on-site visits (self- reporting), on-site visits (independent), in development, no. Therefore, I selected only those documents (in function "load_doc" at first conditional statement at line # 62) that are properly labelled (as per defined metric’s).
 Secondly, It is also observed that there are some irrelevant / extra statements in the text (e.g., headings, company introduction). So, I defined a function "selected_sentences", that takes the file as input and extract only those sentences that are talking about modern slavery or due diligence monitoring process by considering the keywords. These selected statements are considered for the rest of the process.
 
+
 B. Present the code of the solutions developed for this metric and interpret your results. Ensure that each section of the solution is well described and documented.
 In this sample solution, I tried to train the CNN model for the detection of modern slavery statements. I followed the following steps;
   1.	Loaded only those documents that are properly labelled as per metric’s using the function load_doc. From each document only those statements/sentences extracted in which it is discussed about the modern slavery and/or monitoring process. 
@@ -20,11 +21,15 @@ In this sample solution, I tried to train the CNN model for the detection of mod
   8.	Rest of the lines are to define model, train and validate it. 
 
 
+
+
 C. How do you assess the quality of your results? What are the challenges? What would you recommend to do to improve your initial results?
 
 I will assess the model on data collected from different organization. I’ll consider the following steps to improve the results.
   a)	I’ll train and apply a neural network model for the summarization of documents (improvement in sentences selection step)
   b)	I’ll try some other NN models depending on the data to make it more efficient.
+
+
 
 
 D. How would you design and deploy the Project API to align your solution with the
