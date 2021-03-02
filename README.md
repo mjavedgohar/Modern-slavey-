@@ -1,5 +1,4 @@
 Modern slavey Statements Detection 
-
 A. What methodology do you propose to assess the quality of text extracted under
 column ‘TEXT’? This text is extracted from the URLs in column ‘Answer Link’. ?
 
