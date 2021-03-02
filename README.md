@@ -1,14 +1,11 @@
 Modern slavey Statements Detection 
 
-
 A. What methodology do you propose to assess the quality of text extracted under
 column ‘TEXT’? This text is extracted from the URLs in column ‘Answer Link’. ?
 
 The main objective of this activity is to detect the modern slavery statements whether the company has a due diligence process in place to monitor these risks through continuous engagement with suppliers.
 After manually going through the provided data set, it is noticed that data is not ladled properly. some of the documents don't have the labels while some with other than the metric's options i.e., audits of suppliers (self- reporting), audits of suppliers (independent), on-site visits (self- reporting), on-site visits (independent), in development, no. Therefore, I selected only those documents (in function "load_doc" at first conditional statement at line # 62) that are properly labelled (as per defined metric’s).
 Secondly, It is also observed that there are some irrelevant / extra statements in the text (e.g., headings, company introduction). So, I defined a function "selected_sentences", that takes the file as input and extract only those sentences that are talking about modern slavery or due diligence monitoring process by considering the keywords. These selected statements are considered for the rest of the process.
-
-
 
 B. Present the code of the solutions developed for this metric and interpret your results. Ensure that each section of the solution is well described and documented.
 In this sample solution, I tried to train the CNN model for the detection of modern slavery statements. I followed the following steps;
@@ -57,7 +54,6 @@ We can evaluate the sentences/paragraphs for the metric’s. For this activity, 
 D. How would you design and deploy the Project API to align your solution with the
 WikiRate platform?
 I would like to train a NN model and deploy it as API with a user interface so that it can be used to analyse the documents.
-
 
 
 'Explain the prediction by pointing to the part of the text that describes each option of the metric that was found (could be at the level of sentence or paragraph).'? 
