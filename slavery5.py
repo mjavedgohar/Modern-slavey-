@@ -216,7 +216,7 @@ print(model.summary())
 
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['acc'])
 # fit network
-history=model.fit(x_train, y_train, epochs=15, verbose=1) #, validation_data=(x_test, y_test))
+history=model.fit(x_train, y_train, epochs=13, verbose=1) #, validation_data=(x_test, y_test))
 
 model.save("sentiment.model")
 
